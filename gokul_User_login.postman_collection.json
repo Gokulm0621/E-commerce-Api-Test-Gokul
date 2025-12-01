@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "1a137caf-28f3-4279-acc8-bfa5f523d0e9",
+		"name": "gokul_User_login",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50248252",
+		"_collection_link": "https://gokulchandran00621-1452516.postman.co/workspace/Gokul-Chandran's-Workspace~da0c8ec1-ec55-49ac-8bf1-33355f020597/collection/50248252-1a137caf-28f3-4279-acc8-bfa5f523d0e9?action=share&source=collection_link&creator=50248252"
+	},
+	"item": [
+		{
+			"name": "auth user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"admin\",\r\n    \"password\" : \"password123\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://restful-booker.herokuapp.com/auth",
+					"protocol": "https",
+					"host": [
+						"restful-booker",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://restful-booker.herokuapp.com/booking/16",
+					"protocol": "https",
+					"host": [
+						"restful-booker",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"booking",
+						"16"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
